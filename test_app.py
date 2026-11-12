@@ -50,6 +50,7 @@ with urllib.request.urlopen(req) as resp:
     
     # Check details
     assert 'assets/dentinsure-avatar.png' in html
+    assert 'assets/rohanpatani.png' in html
     assert "Dr. Rohan Patani" in html
     assert "World Record Holder" in html
     assert "Surety for Your Pearly Whites" in html
@@ -68,6 +69,7 @@ assets_to_test = [
     ("/assets/dr-rohan-patani.jpg", "image/jpeg"),
     ("/assets/dentinsure-icon.png", "image/png"),
     ("/assets/dentinsure-avatar.png", "image/png"),
+    ("/assets/rohanpatani.png", "image/png"),
     ("/assets/qrcode.min.js", "application/javascript"),
     ("/assets/visiting-card.png", "image/png"),
     ("/assets/Dr_Rohan_Patani.vcf", "text/vcard")
