@@ -5,6 +5,5 @@ Thumbs.db
 __pycache__/
 *.pyc
 .env
-assets/logos/
 assets/rohanpatani-orig.png
 
