@@ -309,9 +309,16 @@ img {
   inset: 0;
   border-radius: var(--radius-full);
   overflow: hidden;
-  background: var(--bg-card);
+  background: #ffffff;
   border: 3px solid var(--bg-card);
   z-index: 1;
+  box-shadow: 0 4px 16px rgba(1, 171, 249, 0.15);
+}
+
+[data-theme="dark"] .avatar-container {
+  background: #ffffff;
+  border-color: #0d2844;
+  box-shadow: 0 0 20px rgba(1, 171, 249, 0.35);
 }
 
 .profile-image {
