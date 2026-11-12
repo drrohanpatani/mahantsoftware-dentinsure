@@ -1,0 +1,35 @@
+{
+  "approved": [
+    {
+      "id": "rev_1",
+      "name": "Shobha S.",
+      "rating": 5,
+      "treatment": "Dental Implants",
+      "review": "I have done 3 implants by Dr. Rohan. He explains very nicely, makes comfortable & the procedure was done very smoothly. Very less pain. Thank you very much.",
+      "date": "2024-03-12",
+      "verified": true,
+      "source": "DentInsure Verified Member"
+    },
+    {
+      "id": "rev_2",
+      "name": "Karan S.",
+      "rating": 5,
+      "treatment": "Root Canal & Implant",
+      "review": "I visited Dr Rohan for root canal and implant treatment. He explains everything in detail and give you genuine suggestions. Moreover treatment charges are also very reasonable. He is friendly and co-operative. I would do like to recommend him for all dental treatments.",
+      "date": "2024-04-05",
+      "verified": true,
+      "source": "DentInsure Verified Member"
+    },
+    {
+      "id": "rev_3",
+      "name": "Jay V.",
+      "rating": 5,
+      "treatment": "Dental Implants",
+      "review": "The implant was done very smoothly and the charges are reasonable when you compare it with others. I would highly highly recommend everyone.",
+      "date": "2024-05-18",
+      "verified": true,
+      "source": "DentInsure Verified Member"
+    }
+  ],
+  "pending": []
+}

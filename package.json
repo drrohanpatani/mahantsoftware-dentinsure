@@ -1,0 +1,19 @@
+{
+  "name": "dr-rohan-patani-portfolio",
+  "version": "1.0.0",
+  "description": "Premium Digital Visiting Card & Professional Portfolio for Dr. Rohan Patani",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "digital-visiting-card",
+    "dentinsure",
+    "dr-rohan-patani",
+    "implantologist",
+    "portfolio"
+  ],
+  "author": "DentInsure",
+  "license": "ISC"
+}
+
