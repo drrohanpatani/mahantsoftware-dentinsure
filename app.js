@@ -29,16 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
     
     instagramUrl: "https://www.instagram.com/dentinsureplans/",
     facebookUrl: "https://www.facebook.com/dentinsure/",
-    productionUrl: "https://dentinsure.in/",
+    productionUrl: "https://drrohanpatani.github.io/mahantsoftware-dentinsure/",
+    qrTargetUrl: "https://drrohanpatani.github.io/mahantsoftware-dentinsure/",
     adminPin: "rohan2026",
     
     getActiveUrl: function() {
+      if (window.location.hostname.includes('github.io')) {
+        return "https://drrohanpatani.github.io/mahantsoftware-dentinsure/";
+      }
       if (window.location.protocol.startsWith('http') && 
           !window.location.hostname.includes('localhost') && 
           !window.location.hostname.includes('127.0.0.1')) {
         return window.location.origin + window.location.pathname;
       }
-      return this.productionUrl;
+      return this.qrTargetUrl;
     }
   };
 
@@ -146,13 +150,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     qrContainer.innerHTML = '';
+    // Clean, neat, high-contrast simple QR code linking directly to GitHub Pages
     new QRCode(qrContainer, {
-      text: activeUrl,
-      width: 196,
-      height: 196,
-      colorDark: "#091b2e",
+      text: CONFIG.qrTargetUrl,
+      width: 200,
+      height: 200,
+      colorDark: "#000000",
       colorLight: "#ffffff",
-      correctLevel: QRCode.CorrectLevel.H
+      correctLevel: QRCode.CorrectLevel.M
     });
   }
 
@@ -168,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const exportCanvas = document.createElement('canvas');
       const exportSize = 600;
       exportCanvas.width = exportSize;
-      exportCanvas.height = exportSize + 140;
+      exportCanvas.height = exportSize + 150;
       const ctx = exportCanvas.getContext('2d');
 
       // 1. Rich Navy background
@@ -210,13 +215,16 @@ document.addEventListener('DOMContentLoaded', () => {
       // 5. Draw QR code
       ctx.drawImage(canvas, qrBoxX + 20, qrBoxY + 20, qrBoxSize - 40, qrBoxSize - 40);
 
-      // 6. Footer branding
+      // 6. Footer branding & direct URL
       ctx.fillStyle = '#fd8732';
       ctx.font = 'italic 16px serif';
-      ctx.fillText(`"${CONFIG.tagline}" • Mob: ${CONFIG.phoneDisplay}`, exportSize / 2, 570);
-      ctx.font = 'bold 14px sans-serif';
+      ctx.fillText(`"${CONFIG.tagline}" • Mob: ${CONFIG.phoneDisplay}`, exportSize / 2, 560);
+      ctx.font = 'bold 15px sans-serif';
       ctx.fillStyle = '#01abf9';
-      ctx.fillText('Scan with any Smartphone Camera to View Profile & Save Contact', exportSize / 2, 605);
+      ctx.fillText(CONFIG.qrTargetUrl, exportSize / 2, 590);
+      ctx.font = '13px sans-serif';
+      ctx.fillStyle = '#cbd5e1';
+      ctx.fillText('Scan with any Smartphone Camera to View Profile & Save Contact', exportSize / 2, 615);
 
       // Trigger download
       const dataUrl = exportCanvas.toDataURL('image/png');

@@ -53,6 +53,8 @@ with urllib.request.urlopen(req) as resp:
     assert 'assets/rohanpatani.png' in html
     assert 'class="verified-seal"' not in html
     assert 'class="about-photo-badge"' not in html
+    assert 'class="qr-brand-center-overlay"' not in html
+    assert 'https://drrohanpatani.github.io/mahantsoftware-dentinsure/' in html
     assert "Dr. Rohan Patani" in html
     assert "World Record Holder" in html
     assert "Surety for Your Pearly Whites" in html
